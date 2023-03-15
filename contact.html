@@ -1,0 +1,31 @@
+---
+layout: default
+title: Contact
+---
+
+<section class="contact">
+  <form id="form" name="contact-form" accept-charset="utf-8"onsubmit="return validateForm()" action="../scripts/Contactus.php" method="post">
+    <fieldset id="inputs">
+      <!-- Name -->
+      <label for="full-name">Full Name</label>
+      <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+
+      <!-- Email Address -->
+      <label for="email-address">Email Address</label>
+      <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+
+      <!-- Company / Organization -->
+      <label for="company/organization">Company / Organization</label>
+      <input type="text" name="company/organization" id="company_org" placeholder="Company / Organization Name" required="">
+
+      <!-- Message -->
+      <label for="message">Message</label>
+      <textarea rows="10" name="message" id="message" placeholder="Message" required=""></textarea>
+      <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+    </fieldset>
+    <div class="g-recaptcha" data-sitekey="6LdON-QUAAAAAGLJA_Iz-Kko_lUM6zSpYEybDqTp"></div>
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+  </form>
+</section>
+

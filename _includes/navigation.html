@@ -1,0 +1,29 @@
+<header>
+  <div id="header_box">
+    <!-- Links to external media -->
+    <div id="external_media">
+      <a href="https://www.youtube.com/channel/UCf_E2lk1wMG7wt49LREkKIA" class = "external_link" target="_blank"><img src="/assets/images/Misc/Youtube.png"  width="60" height="60"></a>
+      <a href="https://github.com/bpaciniengineering" class = "external_link" target="_blank"><img src="/assets/images/Misc/GitHub.png" width="60" height="60"></a>
+      <a href="https://www.linkedin.com/in/bernardo-pacini-a434a5115/?trk=nav_responsive_tab_profile_pic" class = "external_link" target="_blank"><img src="/assets/images/Misc/linkedin.png" width="60" height="60"></a>
+    </div>
+
+    <!-- Logo -->
+    <div id="logo">
+      <a href="{{ site.baseurl }}"><img src="/assets/images/misc/Logo.png" alt="BPaciniEngineering logo" width="450" height="228"></a>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-mobile">
+        <a id="nav-toggle"><span></span></a>
+      </div>
+      <ul class="nav-list">
+        {% for item in site.data.navigation %}
+          <li><a href="{{ item.link }}" target="{{ item.target }}" class="navWord">
+              {{ item.name }}
+          </a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

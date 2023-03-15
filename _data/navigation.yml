@@ -1,0 +1,15 @@
+- name: Home
+  link: /
+  target:
+- name: Projects
+  link: /projects.html
+  target:
+- name: Partnerships
+  link: /partnerships.html
+  target:
+- name: About
+  link: /about.html
+  target:
+- name: Contact
+  link: /contact.html
+  target:

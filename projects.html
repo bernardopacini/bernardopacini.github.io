@@ -1,0 +1,49 @@
+---
+layout: default
+title: Projects
+---
+<!-- Loop Over Each Project -->
+{% assign sorted = site.projects | sort: 'order' | reverse  %}
+{% for project in sorted %}
+  <!-- Project Block -->
+  <section class="project_description">
+    <div class = "project_image" >
+      <!-- Image -->
+      <img src="{{ project.image }}"/>
+    </div>
+    <div id="project_information">
+      <!-- Title -->
+      <h2><a href="{{ project.url }}" class="project_link">{{ project.name }}</a></h2>
+
+      <!-- Dates -->
+      <h3> {{ project.dates }} </h3>
+
+      <div id="project_content">
+        <!-- Description -->
+        <p><strong>Description:</strong> {{ project.description }} </p>
+
+        <!-- Team -->
+        <p><strong>Team:</strong> {{ project.team }} </p>
+
+        <!-- Tools Used -->
+        <p><strong>Tools Used:</strong> {{ project.tools_used }} </p>
+
+        <!-- Links -->
+        <p><strong>Links:</strong> 
+        {% for link in project.links %}
+          {% assign words = link | split:"|" %}
+          <a href="{{ words[1] | strip }}" target="_blank" class="project_link">{{ words[0] | strip }}</a>
+          {% if forloop.last == false %}
+          ,
+          {% endif %}
+        {% endfor %}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Border -->
+  {% if forloop.last == false %}
+    <hr class = "projects_divider"/>
+  {% endif %}
+{% endfor %}

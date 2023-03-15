@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /_notes/
+Disallow: /Images/_notes/
+Disallow: /Images/Misc/
+Disallow: /Images/News_images/
+Disallow: /Images/Partnerships/
+Disallow: /Images/Projects/
+Disallow: /Images/Starboii.JPG
+Disallow: /Pages/_notes/
+Disallow: /Pages/projects/
+Allow: /Pages/projects/Aircraft_Sizing/Aircraft_Sizing_Project_Page.html
+Allow: /Pages/projects/Eaglet_Business_Jet/Eaglet_Business_Jet_Project_Page.html
+Allow: /Pages/projects/Hybrid_Electric_Aircraft/Hybrid_Electric_Aircraft_Project_Page.html
+Allow: /Pages/projects/Rocket/Rocket_Project_Page.html
+Allow: /Pages/projects/Rotating_Wingbox/Rotating_Wingbox_Project_Page.html
+Allow: /Pages/projects/Starboii_Robot/Starboii_Robot_Project_Page.html
+
+Sitemap: http://www.bpaciniengineering.org/sitemap.xml

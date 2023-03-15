@@ -1,0 +1,44 @@
+#personal_description{
+    text-align: justify;
+    font-family: $font-family;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#about_image{
+    margin-top: 50px;
+    border-radius: 25%;
+    text-align: center;
+    border: thick;
+    width: 550px;
+}
+#about_content{
+    text-align: center;
+    a {
+        color: black;
+        &:hover {
+            color: #F90;
+            text-decoration: underline;
+          }
+    }
+}
+
+@media screen and (max-width:$breakpoint){
+    #personal_description{
+        width: 550px;
+    }
+    #about_image{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:580px){
+    #personal_description{
+        width: 95%;
+    }
+    #about_image{
+        width: 90%;
+    }
+}

@@ -1,0 +1,52 @@
+#partnerships_content{
+    text-align: center;
+}
+#partnerships_grid{
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+#partnerships_box{
+    width: 100%;
+    margin: 0 0;
+    padding: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners{
+    width: 100%;
+}
+
+@media screen and (min-width: $breakpoint) {
+    #partnerships_box{
+        border-top: 1px solid black;
+        &:nth-child(-n+3) {
+            border-top: none;
+        }
+    }
+}
+
+@media screen and (max-width:$breakpoint){
+    #partnerships_grid{
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #partnerships_box{
+        width: 100%;
+        margin: 0 0;
+        padding: 0 0;
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid black;
+        align-items: center;
+        &:nth-child(-n+2) {
+            border-top: none;
+        }
+    }
+}

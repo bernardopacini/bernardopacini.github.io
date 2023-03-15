@@ -1,0 +1,39 @@
+# url:
+baseurl: /
+
+collections:
+  projects:
+    output: true
+  partnerships:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "contact"
+    values:
+      layout: "contact"
+  - scope:
+      path: ""
+      type: "about"
+    values:
+      layout: "about"
+  - scope:
+      path: ""
+      type: "partnerships"
+    values:
+      layout: "partnerships"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "projects"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

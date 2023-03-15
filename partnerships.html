@@ -1,0 +1,18 @@
+---
+layout: default
+title: Partnerships
+---
+<div id="partnerships_content">
+  <h1>Gratefully collaborated with:</h1>
+  <!-- <hr class="partner_divider"> -->
+  <!-- Loop Over Each Partnership -->
+  <div id="partnerships_grid">
+  {% assign sorted = site.partnerships | sort: 'order' | reverse  %}
+  {% for partnership in sorted %}
+    <!-- Partner Block -->
+    <div id="partnerships_box">
+      <a href="{{ partnership.link }}" target="_blank"><img src="{{ partnership.image }}" class="partners" /></a>
+    </div>
+  {% endfor %}
+  </div>
+</div>
