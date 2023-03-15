@@ -3,8 +3,24 @@ layout: default
 title: Contact
 ---
 
+<script>
+	function validateForm() {
+	  	var Name = document.forms["contact_form"]["Name"].value;
+	 	var Email = document.forms["contact_form"]["Email"].value;
+		var Mess = document.forms["contact_form"]["Message"].value;
+		 var response = grecaptcha.getResponse();
+	  	if (Name == "" || Email == "" || Mess == "" || response.length == 0) {
+			alert("Please fill all fields and check the Captcha box");
+			return false;
+  		}
+		else {setTimeout(function() { alert('Thank you!'); }, 1);
+			 }
+	}
+</script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
 <section class="contact">
-  <form id="form" name="contact-form" accept-charset="utf-8"onsubmit="return validateForm()" action="../scripts/Contactus.php" method="post">
+  <form id="form" name="contact-form" accept-charset="utf-8" onsubmit="return validateForm()" action="../scripts/Contactus.php" method="post">
     <fieldset id="inputs">
       <!-- Name -->
       <label for="full-name">Full Name</label>
