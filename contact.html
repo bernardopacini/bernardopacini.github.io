@@ -3,22 +3,6 @@ layout: default
 title: Contact
 ---
 
-<script>
-	function validateForm() {
-	  	var Name = document.forms["contact_form"]["Name"].value;
-	 	var Email = document.forms["contact_form"]["Email"].value;
-		var Mess = document.forms["contact_form"]["Message"].value;
-		 var response = grecaptcha.getResponse();
-	  	if (Name == "" || Email == "" || Mess == "" || response.length == 0) {
-			alert("Please fill all fields and check the Captcha box");
-			return false;
-  		}
-		else {setTimeout(function() { alert('Thank you!'); }, 1);
-			 }
-	}
-</script>
-<script src="https://www.google.com/recaptcha/api.js"></script>
-
 <section class="contact">
   <form id="form" name="contact-form" accept-charset="utf-8" onsubmit="return validateForm()" action="../scripts/Contactus.php" method="post">
     <fieldset id="inputs">
@@ -28,16 +12,16 @@ title: Contact
 
       <!-- Email Address -->
       <label for="email-address">Email Address</label>
-      <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+      <input type="email" name="email" id="email-address" placeholder="email@domain.com" required="">
 
       <!-- Company / Organization -->
       <label for="company/organization">Company / Organization</label>
-      <input type="text" name="company/organization" id="company_org" placeholder="Company / Organization Name" required="">
+      <input type="text" name="organization" id="company_org" placeholder="Company / Organization Name" required="">
 
       <!-- Message -->
       <label for="message">Message</label>
       <textarea rows="10" name="message" id="message" placeholder="Message" required=""></textarea>
-      <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+      <input type="hidden" name="message" id="email-subject" value="Contact Form Submission">
     </fieldset>
     <div class="g-recaptcha" data-sitekey="6LdON-QUAAAAAGLJA_Iz-Kko_lUM6zSpYEybDqTp"></div>
     <input type="reset" value="Reset">
