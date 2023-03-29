@@ -3,16 +3,16 @@
     margin: auto;
     overflow: auto;
     #form {
-        width: 100%;
-        padding: 1rem 2%;
+        width: 95%;
+        max-width: $content_width;
+        margin: auto;
+        padding: 2rem 0;
         overflow: auto;
 
         fieldset{
             border: none;
-            width: 96%;
             border-radius: 0;
             margin: 0;
-            padding: 0;
             -webkit-appearance: none;
             -moz-appearance: none;
         
