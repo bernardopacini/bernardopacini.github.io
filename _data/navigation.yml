@@ -10,6 +10,3 @@
 - name: About
   link: /about.html
   target:
-- name: Contact
-  link: /contact.html
-  target:
